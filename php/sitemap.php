@@ -4,6 +4,7 @@
  * SITEMAP GENERATOR
  * LANGUAGE : PHP
  * VERSION 1.0.0
+ * DATE 2022-08-06
  * LICENCE : MIT
 
  * NEED : PHP5+ - MYSQL/MARIADB - LINUX
@@ -23,7 +24,18 @@ $dbn = "db";
 // DO NOT TOUCH
 // OPEN DATABASE CONNECTION
 $pdo = new PDO($dsn.$dbn, $usr, $pwd);
-// SLUGIFY
+
+
+/*
+SLUGIFY
+You need to create proper url
+You can load data from your database for example title for a blog or product list
+title = You Can Do It Baby!
+slugify = you-can-do-it-baby
+It is better for SEO
+*/
+
+
 function slugify($str, $options = array()) {
 
     $str = mb_convert_encoding((string)$str, 'UTF-8', mb_list_encodings());
